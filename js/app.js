@@ -14,14 +14,14 @@ function login () {
     usuario = prompt("Ingrese usuario");
     while (usuario != persona1.name ) {
        alert("Usuario Incorrecto");
-       prompt("Vuelva a intentar");
+       usuario = prompt("Vuelva a intentar");
     }
  
      let clave; 
      clave = prompt("Ingrese clave");
      while (clave != persona1.pass ) {
        alert("clave Incorrecta");
-       prompt("Vuelva a intentar");
+       clave = prompt("Vuelva a intentar");
     }
     
     alert("Bienvenido " + persona1.name);
