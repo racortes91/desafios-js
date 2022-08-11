@@ -1,9 +1,13 @@
 
 // Login usando un objeto como repositorio para futura base de datos.
 
+
+const ussers = []
+
 function login () {
 
     const persona1 = { name: prompt("Ingrese Usuario"),  pass: prompt("Ingrese Contraseña") }
+    ussers.push(persona1)
 
     console.log("Usuario: " + persona1.name)
     console.log("Contrseña: " + persona1.pass)
