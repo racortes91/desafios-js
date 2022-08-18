@@ -7,7 +7,8 @@ let persona1 = { name: "pepe",  pass: "pepe1234"}
    console.log('Contraseña: ', persona1.pass);
 
 let btn = document.getElementById('formBtn');
-btn.addEventListener('click', () =>{
+btn.addEventListener('click', (e) =>{
+   e.preventDefault()
    
    let loginUsser = document.getElementById('formUsser').value;
    let loginPass = document.getElementById('formPass').value;
@@ -23,5 +24,4 @@ btn.addEventListener('click', () =>{
       }
 });
 
-   
    
