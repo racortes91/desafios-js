@@ -5,21 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/styles.css">
-  <title>Document</title>
+  <title>LogIn</title>
 </head>
 <body>
-  <form id="formContenedor" class="contenedor__form" action="">
+  <form id="formContenedor" class="contenedor__form">
+    <!-- LOGO -->
     <img class="form__logo" src="./img/logo.png" width="150px" alt="">
-    <label class="form__usuario" for="">Ingrese Usuario</label>
+    <!-- USSER -->
+    <label class="form__usuario" for=""><b>Ingrese Usuario</b></label>
     <input id="formUsser" class="form__campo--usuario" type="text">
+    <!-- MENSAJE USSER -->
     <p id="usserTxt" class="form__texto--usuario"></p>
-    <label class="form__contrasena" for="">Ingrese Contraseña</label>
+    <!-- PASS -->
+    <label class="form__contrasena" for=""><b>Ingrese Contraseña</b></label>
     <input id="formPass" class="form__campo--contrasena" type="password">
+    <!-- MENSAJE PASS -->
     <p id="passTxt" class="form__texto--contrasena"></p>
-    <button id="formBtn" class="form__button">Login</button>
+   <!-- BOTON -->
+    <button id="formBtn" class="form__button" onclick="redirigir">Login</button>
   </form>
   
-  <script src="./js/app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

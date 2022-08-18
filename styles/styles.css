@@ -46,3 +46,11 @@ body {
    padding: 10px;
    text-align: center;
 }
+
+.form__texto--usuario{
+    color: red;
+}
+
+.form__texto--contrasena{
+    color: red;
+}
