@@ -1,4 +1,4 @@
-const carrito = [];
+const carrito = JSON.parse(localStorage.getItem("carrito")) || [ ];
 
 class StatusCarrito {
    constructor (nombre, precio, imagen, id){
@@ -39,11 +39,11 @@ botones.forEach(elemento => {
 
 function agregarCarrito(e) {
 
-   let carritoLocal = JSON.parse(localStorage.getItem("carrito"));
+//   let carritoLocal = JSON.parse(localStorage.getItem("carrito"))
 
-   if(carritoLocal){
-      carrito = carritoLocal;
-   }
+//    if (carritoLocal) {
+//       carrito = carritoLocal;
+//    }
 
    let imagen = e.target.parentNode.children[0].src;
    let nombre = e.target.parentNode.children[1].textContent;
