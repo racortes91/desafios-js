@@ -86,3 +86,21 @@ body {
     height: 350px;
     box-shadow: rgb(118, 118, 118) 2px 2px 5px;  
 }
+
+.carousel .carousel-item {
+   /* width: 200px; */
+   /* position: absolute; */
+   top: 0;
+   left: 0;
+}
+
+.carousel-item {
+   position: relative;
+   display: none;
+   float: left;
+   width: 100%;
+   margin-right: -100%;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   transition: transform .6s ease-in-out;
+}

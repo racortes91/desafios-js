@@ -39,11 +39,6 @@ botones.forEach(elemento => {
 
 function agregarCarrito(e) {
 
-//   let carritoLocal = JSON.parse(localStorage.getItem("carrito"))
-
-//    if (carritoLocal) {
-//       carrito = carritoLocal;
-//    }
 
    let imagen = e.target.parentNode.children[0].src;
    let nombre = e.target.parentNode.children[1].textContent;
@@ -55,3 +50,22 @@ function agregarCarrito(e) {
 
    localStorage.setItem("carrito", JSON.stringify(carrito));
 }
+
+// Cargado PopUp - Toastify //
+let btnPopUp = document.getElementById("btnAgregar");
+
+btnPopUp.addEventListener("click", () => {
+   Toastify({
+      text: "Producto agregado al carrito 👍🛒", 
+      
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+        color: "white",
+        padding: "10px",
+        
+      }
+    }).showToast();
+    
+
+})
+   
