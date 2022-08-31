@@ -52,11 +52,13 @@ function agregarCarrito(e) {
 }
 
 // Cargado PopUp - Toastify //
-let btnPopUp = document.getElementById("btnAgregar");
+let btnPopUp = document.querySelectorAll('.boton__productos');
 
 btnPopUp.addEventListener("click", () => {
    Toastify({
-      text: "Producto agregado al carrito 👍🛒", 
+      text: "Producto agregado al carrito 👍 🛒", 
+      text: JSON.stringify(StatusCarrito), 
+
       
       style: {
         background: "linear-gradient(to right, #00b09b, #96c93d)",
@@ -68,4 +70,3 @@ btnPopUp.addEventListener("click", () => {
     
 
 })
-   
