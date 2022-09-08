@@ -104,3 +104,29 @@ body {
    backface-visibility: hidden;
    transition: transform .6s ease-in-out;
 }
+
+.contain__pokemon {
+   display: flex;
+   justify-content: space-around;
+}
+
+.form__contain {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   padding: 100px;
+}
+
+.contain__pokemon2 {
+   display: flex;
+   justify-content: space-around;
+}
+
+ .boton__buscar {
+   padding: 15px;
+   background-color: green;
+   border: none;
+   color: white;
+ }
+
+ 
