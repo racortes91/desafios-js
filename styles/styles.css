@@ -13,6 +13,7 @@ body {
 
 .contenedor__header {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: rgb(0, 180, 0);
@@ -24,12 +25,18 @@ body {
  }
 
 .boton__carrito {
-    border: none;
-    background: none;
-    width: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   border: none;
+   background: none;
+   width: 50px;
+   size: 100px;
+   font-size: 20px;
 }
 
- .contador {
+.contador {
     color: white;
  }
 
@@ -130,5 +137,56 @@ body {
    background-color: rgb(0, 180, 0);
    border: none;
    color: white;
+}
 
+.contendor__busqueda {
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   padding: 20px;
+   background-attachment: white;
+   max-width: 100%;
+}
+
+.input__busqueda {
+   display: flex;
+   max-width: 50%;
+   color: green;
+}
+
+a {
+   color: white;
+   text-decoration: none;
+
+}
+
+.contendor__checkout {
+   display: flex;
+   justify-content: center;
+   align-content: center;   
+   padding: 50px;
+   border-radius: 20px;
+   margin: 30px;
+
+}
+
+.tr__conain--checkout{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   
+}
+
+.boton__modal--checkout {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   max-width: 70%;
+   align-content: center;   
+}
+
+.titulo__chechout h1 {
+   display: flex;
+   justify-content: center;
+   font-size: 40px;
 }

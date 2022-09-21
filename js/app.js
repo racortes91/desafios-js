@@ -7,7 +7,7 @@ class StatusCarrito {
       this.imagen = imagen;
       this.cantidad = 1;
       this.id = id;
-      this.subtotal= precio;
+      this.subtotal = precio;
    }
 }
 
@@ -22,7 +22,7 @@ function cardsProductos(arrayProductos) {
       div.innerHTML = `<div class="consola__card">
                            <img src=" ${productos.img}" alt="${productos.id}">
                            <h2 class="titulo__producto">${productos.nombre}</h2>
-                           <p class="precio__producto">$${productos.precio}</p>
+                           <p class="precio__producto">${productos.precio}</p>
                            <button id="btnAgregar" class="boton__productos">
                               Agregar
                            </button>
@@ -31,11 +31,21 @@ function cardsProductos(arrayProductos) {
       contenerdoproductos.appendChild(div);
    }
 }
+
+
 cardsProductos(productos);
 
+//Buscador
+const buscador = document.getElementById("search")
 
-// Cargado PopUp - Toastify //
-let btnPopUp = document.querySelectorAll('.boton__productos');
+buscador.addEventListener("input",() => {
+   cardsProductos(productos.filter(productos => productos.nombre.toLowerCase().includes(buscador.value.toLowerCase())))
+})
+
+
+
+// Cargado PopUp - Toastify
+let btnPopUp = document.querySelectorAll(".boton__productos");
 
 btnPopUp.forEach(btn => {
    btn.addEventListener("click",() => {
