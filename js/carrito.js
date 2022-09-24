@@ -19,8 +19,7 @@ function rellenarCarrito(arrayProductos) {
 
         row.innerHTML = `
                         <td>${producto.nombre}</td>
-                        <td>${producto.imagen}</td>
-                        <td>${producto.precio}</td>
+                        <td><span>$</span> ${producto.precio}</td>
                         <td>${producto.cantidad}</td>
                         <td>$ ${producto.subtotal}</td>
                         <td> <button id="${producto.id}" class="btn btn-danger eliminar__productos">Eliminar</button></td>
@@ -29,7 +28,8 @@ function rellenarCarrito(arrayProductos) {
     }
 }
 
-// Borrar elementos de carrito
+// Borrar elementos de carrito, en este caso no sé por que se debe recargar
+//la página para borrar bien
 let botonEliminar = document.querySelectorAll(".eliminar__productos");
 
 botonEliminar.forEach(elemento => {
@@ -97,6 +97,15 @@ function carritoHeader(arrayProductos){
 
 }
 
+let total = document.getElementById("precioTotal");
+
+function  actualizarCarrito (){
+    contadorCarrito.innerText= carrito.length          
+    total.innerText = carrito.reduce((acc,el)=> acc + (el.precio * el.cantidad), 0)
+ }                                                             
+ 
+
+
 // Contador en local Storage
 let contadorCarritoLocal = JSON.parse(localStorage.getItem("carrito"));
 
@@ -104,8 +113,3 @@ let contadorCarritoLocal = JSON.parse(localStorage.getItem("carrito"));
       carritoHeader(contadorCarritoLocal);
    }
 
-
-//Buscador
-buscador.addEventListener('input',()=>{
-    mostrarProductos(stockProductos.filter(item=> item.nombre.toLowerCase().includes(buscador.value.toLowerCase())))
-})

@@ -1,7 +1,7 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 class StatusCarrito {
-   constructor(nombre,precio,cantidad,imagen,id,subtotal) {
+   constructor(nombre,precio,cantidad,imagen,id,subtotal,total) {
       this.nombre = nombre;
       this.precio = precio;
       this.imagen = imagen;
@@ -11,9 +11,10 @@ class StatusCarrito {
    }
 }
 
-let contenerdoproductos = document.getElementById("contenedorProducto");
+let contenerdorProductos = document.getElementById("contenedorProducto");
 
 function cardsProductos(arrayProductos) {
+   contenerdorProductos.innerHTML =  ''
    for (let productos of arrayProductos) {
       let div = document.createElement("div");
 
@@ -28,7 +29,7 @@ function cardsProductos(arrayProductos) {
                            </button>
                         </div> `
 
-      contenerdoproductos.appendChild(div);
+      contenerdorProductos.appendChild(div);
    }
 }
 
@@ -60,4 +61,6 @@ btnPopUp.forEach(btn => {
       }).showToast();
    })
 })
+
+
 
