@@ -7,7 +7,6 @@ let botones = document.querySelectorAll(".boton__productos");
 
 
 
-console.log(botones);
 botones.forEach(elemento => {
     elemento.addEventListener("click",agregarCarrito);
 })
@@ -51,7 +50,6 @@ function eliminarProducto(e){
 
 
 // Agregar productos al Carrito
- console.log(productos);
 
  function agregarCarrito(e) {
 

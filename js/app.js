@@ -33,7 +33,6 @@ function cardsProductos(arrayProductos) {
    }
 }
 
-
 cardsProductos(productos);
 
 //Buscador
